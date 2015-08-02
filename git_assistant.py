@@ -26,9 +26,10 @@ while date != datetime.datetime(2015, 9 , 25, 12 , 4, 5):
     rnd_string = ''.join(random.choice(string.ascii_uppercase + string.digits) for _ in range(5))
     file_object.write(rnd_string + '\n')
 
-    os.system("git add .")
-    os.system("git commit -m \"New commit\"")
-    os.system("git push")
+    os.system("git add git_assistant.py")
+    os.system("git status")
+    #os.system("git commit -m \"New commit\"")
+    #os.system("git push")
     time.sleep(5)
 
 file_object.close()
