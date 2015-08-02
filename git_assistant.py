@@ -1,4 +1,5 @@
 import os
+import time
 import string
 import random
 import datetime
@@ -27,5 +28,7 @@ while date != datetime.datetime(2015, 9 , 25, 12 , 4, 5):
 
     os.system("git add .")
     os.system("git commit -m \"New commit\"")
+    os.system("git push")
+    time.sleep(5)
 
 file_object.close()
