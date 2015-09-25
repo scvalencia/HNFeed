@@ -12,7 +12,7 @@ command = 'date 0916091215'
 file_object = open('myfile.dat', 'w')
 
 
-date = datetime.datetime(2015, 7, 1, 12, 4, 5)
+date = datetime.datetime(2015, 5, 1, 12, 4, 5)
 while date != datetime.datetime(2015, 9 , 25, 12 , 4, 5): 
     date += datetime.timedelta(days = 1)
     year = str(date.year)
