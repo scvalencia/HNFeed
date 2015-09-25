@@ -12,7 +12,7 @@ command = 'date 0916091215'
 file_object = open('myfile.dat', 'w')
 
 
-date = datetime.datetime(2015, 8 , 1, 12 , 4, 5)
+date = datetime.datetime(2015, 7, 1, 12, 4, 5)
 while date != datetime.datetime(2015, 9 , 25, 12 , 4, 5): 
     date += datetime.timedelta(days = 1)
     year = str(date.year)
@@ -24,12 +24,13 @@ while date != datetime.datetime(2015, 9 , 25, 12 , 4, 5):
     
 
     rnd_string = ''.join(random.choice(string.ascii_uppercase + string.digits) for _ in range(5))
-    file_object.write(rnd_string + '\n')
+    file_object = open(rnd_string + '.dat', 'w')
 
-    os.system("git add git_assistant.py")
-    os.system("git status")
-    #os.system("git commit -m \"New commit\"")
+    os.system("git add " + rnd_string + '.dat')
+    os.system("git commit -m \"New commit\"")
     #os.system("git push")
-    time.sleep(5)
+    #time.sleep(5)
+
+    #os.system("git add myfile.dat")
 
 file_object.close()
